@@ -3,8 +3,6 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { GetOneJobRequest } from '../redux-saga/Action/JobAction'
-import { render } from 'react-dom'
-import Image from 'next/image'
 import ImageFallback from '../component/layout/ImageFallback'
 
 export default function JobDetail(props) {
@@ -42,7 +40,6 @@ export default function JobDetail(props) {
 
             <div className='mt-6'>
               <div className='text-gray-600'><div dangerouslySetInnerHTML={{ __html: job.description}} /></div>
-              {/* <div className='text-gray-600'>{job.description}</div> */}
             </div>
           </div>
         </div>
@@ -70,7 +67,6 @@ export default function JobDetail(props) {
             <h3 className='font-bold text-gray-800 mb-2 px-4 pt-3'>How to apply</h3>
             <hr className='mb-1'></hr>
             <div className='px-4 py-2 text-gray-600 text-sm'><div className='flex' dangerouslySetInnerHTML={{ __html: job.how_to_apply}} /></div>
-            {/* <div className='px-4 py-2 text-gray-600 text-sm'>{job.how_to_apply}</div> */}
           </div>
         </div>
       </div>
